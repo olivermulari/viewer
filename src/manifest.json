@@ -1,0 +1,8 @@
+{
+  "short_name": "Portfolio",
+  "name": "Oliver Mulari's Portfolio Website",
+  "start_url": "https://olivermulari.github.io/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

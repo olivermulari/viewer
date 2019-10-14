@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Cairo|Montserrat|Press+Start+2P|Raleway:100|Wallpoet&display=swap");
+
+/*
+font-family: 'Press Start 2P', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Wallpoet', cursive;
+font-family: 'Cairo', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+// Functions
+
+@mixin fullheight() {
+  height: 100vh;
+  height: calc(100 * var(--vh));
+}
+
+@mixin page {
+  // this needs to be specified
+  // margin-top: $bar-width + 30px;
+  overflow: auto;
+  h1 {
+    margin: 0;
+  }
+
+  @media screen and (min-width: $break-small) {
+    margin-left: $bar-width;
+    width: calc(100vw - #{$bar-width});
+  }
+  @media screen and (min-width: $break-medium) {
+
+  }
+  @media screen and (min-width: $break-large) {
+    margin-left: 0;
+    width: 100vw;
+  }
+}
+
+@mixin centerItems() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// Scrollbar disabled
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+// Container Styles
+
+html,
+body {
+  @include fullheight();
+  @include absolute();
+  width: 100vw;
+  display: block;
+
+  // as a default for all text
+  user-select: none;
+
+  // makes the window stay in place
+  overflow: hidden;
+}
+
+.app {
+  @include fullheight();
+  @include absolute();
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.nav {
+  @include fullheight();
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(105%);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding-top: 100px;
+
+  transition: transform 0.5s;
+
+  div {
+    @include centerItems();
+    color: white;
+    cursor: pointer;
+
+    transition: color 0.5s;
+
+    &:hover {
+      background-color: black;
+      color: rgb(255, 69, 162);
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.2em;
+      text-align: center;
+    }
+  }
+}
+
+.visible {
+  transform: translateX(0%);
+}
+
+.nav-switch {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: transform 0.5s;
+  cursor: pointer;
+
+  // important to keep over overlays!
+  z-index: 1000;
+}
+
+.vertical {
+  transform: rotate(90deg);
+}
