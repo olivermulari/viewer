@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 
 import Flowlines from "flowlines";
 import Maze from "depthmaze";
+import FluidSim from "fluidsim";
 
 import 'normalize.css';
 import '../styles/style.scss';
@@ -19,11 +20,14 @@ class App extends Component {
   figureBackground() {
     switch (this.state.showing) {
       case "flowlines":
-      default:
         this.current = new Flowlines("pixi-scene");
         break;
       case "maze":
         this.current = new Maze("pixi-scene");
+        break;
+      case "fluid":
+      default:
+        this.current = new FluidSim("pixi-scene");
         break;
     }
   }

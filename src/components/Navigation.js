@@ -7,7 +7,7 @@ import '../styles/style.scss';
 class Navigation extends Component {
   constructor() {
     super()
-    this.items = ["flowlines", "maze"];
+    this.items = ["fluid", "flowlines", "maze"];
     this.state = {
       visible: false,
     }
@@ -26,8 +26,8 @@ class Navigation extends Component {
         <div className={className()}>
           {this.items.map(item => {
             return (
-              <div onClick={() => this.props.show(item)}>
-                <h1 key={item}>{item.toUpperCase()}</h1>
+              <div onClick={() => this.props.show(item)} key={item}>
+                <h1>{item.toUpperCase()}</h1>
               </div>
             );
           })}

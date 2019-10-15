@@ -57,6 +57,7 @@
   "dependencies": {
     "depthmaze": "^0.1.0",
     "flowlines": "^1.0.4",
+    "fluidsim": "^0.1.0",
     "normalize.css": "^8.0.1",
     "react-app-polyfill": "^1.0.1"
   }
