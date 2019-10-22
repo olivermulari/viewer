@@ -55,7 +55,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "depthmaze": "^0.1.1",
+    "depthmaze": "^0.1.2",
     "flowlines": "^1.1.0",
     "fluidsim": "^0.1.0",
     "normalize.css": "^8.0.1",
