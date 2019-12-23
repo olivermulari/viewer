@@ -20,14 +20,14 @@ class App extends Component {
   figureBackground() {
     switch (this.state.showing) {
       case "flowlines":
-        this.current = new Flowlines("pixi-scene");
+        this.current = new Flowlines("scene-div");
         break;
       case "maze":
-        this.current = new Maze("pixi-scene");
+        this.current = new Maze("scene-div");
         break;
       case "fluid":
       default:
-        this.current = new FluidSim("scene");
+        this.current = new FluidSim("scene-div");
         break;
     }
   }
@@ -42,7 +42,7 @@ class App extends Component {
 
   showBackGround = (i) => {
     this.current.destroy();
-    document.getElementById("pixi-scene").innerHTML = "";
+    document.getElementById("scene-div").innerHTML = "";
     
     this.setState({showing: i}, () => {
       this.figureBackground();
@@ -63,7 +63,7 @@ class App extends Component {
     return (
       <div id="app">
         <Navigation show={this.showBackGround} showing={this.state.showing}/>
-        <div id="pixi-scene"></div>
+        <div id="scene-div"></div>
       </div>
     )
   }

@@ -94,6 +94,8 @@ body {
 
   transition: transform 0.5s;
 
+  z-index: 100;
+
   div {
     @include centerItems();
     color: white;
