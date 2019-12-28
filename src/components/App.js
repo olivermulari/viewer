@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from "./Navigation";
 
-import Flowlines from "flowlines";
+import Flowlines from "@olivermulari/flowlines";
 import Maze from "depthmaze";
 import FluidSim from "@olivermulari/fluidsim";
 

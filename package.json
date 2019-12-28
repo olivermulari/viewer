@@ -55,9 +55,9 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "@olivermulari/flowlines": "^2.0.0",
     "@olivermulari/fluidsim": "^2.0.2",
     "depthmaze": "^0.1.2",
-    "flowlines": "^1.1.0",
     "normalize.css": "^8.0.1",
     "react-app-polyfill": "^1.0.1"
   }
