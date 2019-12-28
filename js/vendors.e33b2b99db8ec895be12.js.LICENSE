@@ -17,6 +17,12 @@
 
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
 /*!
  * @pixi/settings - v5.1.1
  * Compiled Fri, 02 Aug 2019 23:20:23 UTC
@@ -177,12 +183,6 @@
  * @pixi/mesh is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
-
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
 
 /** @license React v16.8.6
  * react.production.min.js
