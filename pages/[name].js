@@ -69,7 +69,7 @@ export default function Home({ name }) {
               <li
                 key={name}
                 className="px-8 py-4 cursor-pointer hover:bg-gray-600 transition-colors duration-200 rounded-lg"
-                onClick={() => router.push(`/${name}`)}
+                onClick={() => {router.push(`/${name}`); setNavOpen(false)}}
               >
                 <p className="text-white font-bold uppercase text-lg tracking-widest">{name}</p>
               </li>
