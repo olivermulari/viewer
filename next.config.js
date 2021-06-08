@@ -1,5 +1,16 @@
-const isProd = process.env.NODE_ENV === 'production'
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 module.exports = (phase, { defaultConfig }) => {
-  defaultConfig.basePath = isProd ? '/viewer' : ""
-  return defaultConfig
+  if (phase === PHASE_DEVELOPMENT_SERVER) {
+    return {
+      /* development only config options here */
+      ...defaultConfig,
+    }
+  }
+
+  return {
+    /* config options for all phases except development here */
+    ...defaultConfig,
+    basePath: '/viewer',
+    assetPrefix: '/viewer/',
+  }
 };
