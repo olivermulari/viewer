@@ -26,7 +26,7 @@ export default class FluidSim {
       transparent: false
     });
     this.grid = new Grid(this.app, this.options);
-    this.createScene(this.sceneid);
+    this.createScene();
   };
 
   /**

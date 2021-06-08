@@ -4,7 +4,8 @@ import Head from 'next/head'
 
 import FlowLines from '../flowlines/FlowLines'
 import FluidSim from '../fluidsim/FluidSim'
-const scenes = ["flowlines", "fluidsim"]
+import Maze from '../maze/Maze'
+const scenes = ["flowlines", "fluidsim", "maze"]
 
 export default function Home({ name }) {
   const router = useRouter()
@@ -13,11 +14,14 @@ export default function Home({ name }) {
 
   // Create scene hook
   useEffect(() => {
-    if (typeof window === "undefined") return
+    if (typeof window === "undefined") return;
     let scene = null;
     switch (activeScene) {
       case "fluidsim":
         scene = new FluidSim("scene")
+        break;
+      case "maze":
+        scene = new Maze("scene")
         break;
       case "flowlines":
       default:
