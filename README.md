@@ -1,10 +1,8 @@
-# Background viewer
+Viewer
+======
 
-## Features
-- Application to view npm modules in action in production and development
+An application that utilises my own graphic library [valo.js](https://github.com/olivermulari/valo.js).
 
-## Todo:
-- sub navigations for presets
-- menu
-- real time modifications
-- loader?
+## Projects
+- Flowlines
+- Fluid simulation
