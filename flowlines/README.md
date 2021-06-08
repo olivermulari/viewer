@@ -1,8 +1,7 @@
-# Flowlines
+Flowlines
+=========
 
-[![Build Status](https://travis-ci.org/olivermulari/flowlines.png?branch=master)](https://travis-ci.org/olivermulari/flowlines) . [![npm](https://img.shields.io/npm/v/flowlines.svg?style=flat-square)](https://www.npmjs.com/package/flowlines)
-
-A Pixi.js background scene that generates randomly.
+An evolving line background made with [valo.js](https://github.com/olivermulari/valo.js).
 
 ## Features
 - Vectorfield generated with perlin noise
